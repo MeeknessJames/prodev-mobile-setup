@@ -7,14 +7,14 @@ export default function Index() {
     <SafeAreaProvider>
       <SafeAreaView style={{ flex: 1 }}>
         <ImageBackground
-          source={require("../assets/images/background-image.png")}
+          source={require("@/assets/images/background-image.png")}
           style={styles.background}
           resizeMode="cover"
         >
           <View style={styles.container}>
             {/* Company Logo */}
             <View style={styles.companyLogo}>
-              <Image source={require("../assets/images/Logo.png")} />
+              <Image source={require("@/assets/images/Logo.png")} />
             </View>
 
             {/* Text Elements */}
@@ -48,9 +48,7 @@ export default function Index() {
 }
 
 const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-  },
+  container: { flex: 1 },
   background: {
     flex: 1,
     justifyContent: "center",
@@ -63,9 +61,7 @@ const styles = StyleSheet.create({
     padding: 20,
     marginBottom: 50,
   },
-  textGroup: {
-    alignItems: "center",
-  },
+  textGroup: { alignItems: "center" },
   textLarge: {
     color: "white",
     fontWeight: "800",
