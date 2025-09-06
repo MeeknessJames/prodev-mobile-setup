@@ -1,12 +1,5 @@
-import {
-  Dimensions,
-  Image,
-  ImageBackground,
-  StyleSheet,
-  Text,
-  TouchableOpacity,
-  View,
-} from "react-native";
+// app/index.tsx
+import { Dimensions, Image, ImageBackground, StyleSheet, Text, TouchableOpacity, View } from "react-native";
 import { SafeAreaProvider, SafeAreaView } from "react-native-safe-area-context";
 
 export default function Index() {
@@ -19,30 +12,30 @@ export default function Index() {
           resizeMode="cover"
         >
           <View style={styles.container}>
+            {/* Company Logo */}
             <View style={styles.companyLogo}>
               <Image source={require("@/assets/images/Logo.png")} />
             </View>
 
+            {/* Text Elements */}
             <View style={styles.textGroup}>
-              <Text style={styles.textLarge}>
-                Find your favorite place here
-              </Text>
+              <Text style={styles.textLarge}>Find your favorite place here</Text>
               <Text style={styles.textSmall}>The best prices for over 2 </Text>
               <Text style={styles.textSmall}>million properties worldwide</Text>
             </View>
 
+            {/* Buttons and Navigation Prompt */}
             <View style={{ position: "absolute", bottom: 0, width: "100%" }}>
               <View style={styles.buttonGroup}>
                 <TouchableOpacity style={styles.button}>
-                  <Text style={{ ...styles.textSmall, color: "black" }}>
-                    Join here
-                  </Text>
+                  <Text style={{ ...styles.textSmall, color: "black" }}>Join here</Text>
                 </TouchableOpacity>
 
                 <TouchableOpacity style={styles.transparentButton}>
                   <Text style={styles.textSmall}>Sign In</Text>
                 </TouchableOpacity>
               </View>
+
               <View style={{ alignItems: "center", paddingVertical: 20 }}>
                 <Text style={{ color: "white" }}>Continue to home</Text>
               </View>
@@ -55,9 +48,7 @@ export default function Index() {
 }
 
 const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-  },
+  container: { flex: 1 },
   background: {
     flex: 1,
     justifyContent: "center",
@@ -70,9 +61,7 @@ const styles = StyleSheet.create({
     padding: 20,
     marginBottom: 50,
   },
-  textGroup: {
-    alignItems: "center",
-  },
+  textGroup: { alignItems: "center" },
   textLarge: {
     color: "white",
     fontWeight: "800",
